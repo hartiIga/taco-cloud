@@ -10,4 +10,17 @@ public class HomeController {
     public String home() {
         return "home";
     }
+
+    @GetMapping("/hello")
+    public String hello() {
+        Ingredient.Type type = Ingredient.Type.CHEESE;
+        return "home";
+    }
+
+    @GetMapping("/design")
+    public String design() {
+
+        return "design";
+    }
+
 }
