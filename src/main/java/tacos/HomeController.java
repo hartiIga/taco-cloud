@@ -2,25 +2,21 @@ package tacos;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/")
 public class HomeController {
 
-    @GetMapping("/")
+    @GetMapping
     public String home() {
         return "home";
     }
 
-    @GetMapping("/hello")
+    @GetMapping("hello")
     public String hello() {
         Ingredient.Type type = Ingredient.Type.CHEESE;
         return "home";
-    }
-
-    @GetMapping("/design")
-    public String design() {
-
-        return "design";
     }
 
 }
